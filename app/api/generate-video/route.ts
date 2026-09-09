@@ -8,7 +8,7 @@ fal.config({
 export async function POST(req: NextRequest) {
   try {
     const { prompt } = await req.json();
-    const result: any = await fal.subscribe("fal-ai/luma-dream-machine", {
+    const result: any = await fal.subscribe("fal-ai/minimax-video", {
       inputs: { prompt },
     });
     const videoUrl = result.data?.video?.url || result.video?.url;
